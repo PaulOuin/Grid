@@ -1,0 +1,150 @@
+html {
+    background-color : lightgrey;
+}
+
+.personnages {
+    display : grid; 
+}
+
+.personnage {
+    border : solid red 2px;
+    text-align : center;
+    vertical-align : middle;
+    padding : 10px;
+    border-radius: 10px;
+    
+}
+
+.description {
+
+}
+
+.personnage : hover {
+    .description {
+        visibility : visible;
+    }
+}
+
+.personnage img {
+    width : 300px;
+    height: 300px;
+    margin : auto;
+    border-radius: 5px;
+}
+
+.logo {
+    grid-area : logo;
+    margin : auto;
+}
+
+.logo img {
+    width : 300px;
+}
+
+.cartman {
+    grid-area : content1;
+    border-color : #FCB823;
+    background-color : #23B1A5;
+}
+
+.stan {
+    grid-area : content2;
+    border-color : #EEF1F3;
+    background-color : darkgray;
+    
+}
+
+.clyde {
+    grid-area : content3;
+    border-color : #00ADE3;
+    background-color : #FFFFFF;
+    
+}
+
+.token {
+    grid-area : content4;
+    border-color : #BAE0CD;
+    background-color : #23B1A5;
+    color : white;
+}
+
+.timmy {
+    grid-area : content5;
+     border-color : #E0ABCE;
+    background-color : #F8F390;
+}
+
+.butters {
+    grid-area : content6;
+    border-color : #BB9DC8;
+    background-color : coral;
+     
+}
+
+.kyle {
+    grid-area : content7;
+    border-color : #A3D8F5;
+    background-color : #0072BC;
+}
+
+.kenny {
+    grid-area : content8;
+    border-color : #E7CEE3;
+    background-color : #F299BF;
+}
+
+.coon {
+    grid-area : content9;
+    border-color : #FFA300;
+    background-color : #FF410B;
+}
+
+@media screen and (min-width:360px) {
+    .personnages { grid-template-areas : 
+      "logo"
+      "content9"
+      "content1"
+      "content2"
+      "content3"
+      "content4"
+      "content5"
+      "content6"
+      "content7"
+      "content8";
+    }
+}
+
+@media screen and (min-width:768px) {
+    .personnages {
+        grid-template-columns : repeat(2,1fr);
+        grid-template-areas : 
+        "logo logo"
+      "content9 content9"
+      "content1 content2"
+      "content3 content4"
+      "content5 content6"
+      "content7 content8";
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .personnages {
+        grid-template-columns : repeat(3,1fr);
+        grid-template-areas : 
+        "logo logo logo"
+      "content9 content1 content2"
+      "content3 content4 content5"
+      "content6 content7 content8";
+     }
+}
+
+@media screen and (min-width:1280px) {
+    .personnages {
+        grid-template-columns : repeat(4,1fr);
+        grid-template-areas : 
+        "logo logo logo logo"
+      "content9 content9 content9 content9"
+      "content1 content2 content3 content4"
+      "content5 content6 content7 content8";
+    }
+}
